@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 IBM Tech Task by Martin Majorov (2020.11.21)
+  h2 Node.js
+  h2 Requirements: 
+  p Create a rest api service which reads the data from this rest api endpoint: https://www.vrk.lt/statiniai/puslapiai/rinkimai/rt.json
+  p should return the election date,  election name and election id. It should be possible to do the sorting of data by date by passing the parameter to the rest api.
+  h2 Implementation:
+  p This solution implements Node.js, Express.js and node-fetch to aquire the date from the mentioned API.
+  p The aquired data is filtered and sent to controller in JSON format.
+  p The solution can be found by entering /results endpoint.
+  p /results endpoint sends back unsorted data.
+  p To sort data you need to enter sorted parameter with value of 1 (/results?sorted=1)
+  p If sorted=0 or not entered, /result endpoint always sends back unsorted JSON response.
